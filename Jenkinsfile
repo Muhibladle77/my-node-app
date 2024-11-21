@@ -36,8 +36,6 @@ stage('Python Program Execution') {
         script {
             echo 'Running Python program...'
 
-            // Specify the full path to Python executable
-            bat 'C:\Users\HP\AppData\Local\Programs\Python\Python313\python.exe --version'
 
             // Execute the Python script
             bat 'C:\Users\HP\AppData\Local\Programs\Python\Python313\python.exe new.py'
