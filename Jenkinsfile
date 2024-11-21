@@ -37,7 +37,7 @@ pipeline {
             steps {
                 script {
                     // Build Docker image as per your original script
-                    bat 'docker build -t my-nodejs-app .'
+                    bat 'docker build -t my-nodejs-app1 .'
                 }
             }
         }
