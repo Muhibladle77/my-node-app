@@ -8,7 +8,7 @@ pipeline {
                 script {
                     echo 'Accessing GitHub Repository...'
                     // Clone the GitHub repository
-                    git 'https://github.com/your-username/your-repository.git'
+                    git 'https://github.com/Muhibladle77/my-node-app.git'
                 }
             }
         }
