@@ -38,7 +38,7 @@ stage('Python Program Execution') {
 
 
             // Execute the Python script
-            bat 'C:\Users\HP\AppData\Local\Programs\Python\Python313\python.exe new.py'
+            bat 'python new.py'
         }
     }
 }
