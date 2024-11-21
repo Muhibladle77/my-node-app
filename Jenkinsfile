@@ -36,14 +36,15 @@ stage('Python Program Execution') {
         script {
             echo 'Running Python program...'
 
-            // Ensure Python is installed
-            bat 'python --version'
+            // Specify the full path to Python executable
+            bat 'C:\Users\HP\AppData\Local\Programs\Python\Python313\\python.exe --version'
 
             // Execute the Python script
-            bat 'python new.py'
+            bat 'C:\Users\HP\AppData\Local\Programs\Python\Python313\\python.exe new.py'
         }
     }
 }
+
 
         // Additional optional stages for Build, Test, or Deploy
         stage('Build Docker Image') {
