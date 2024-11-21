@@ -31,17 +31,6 @@ pipeline {
             }
         }
 
-stage('Python Program Execution') {
-    steps {
-        script {
-            echo 'Running Python program...'
-
-/
-            // Execute the Python script
-            bat 'python print("hello")'
-        }
-    }
-}
 
 
         // Additional optional stages for Build, Test, or Deploy
