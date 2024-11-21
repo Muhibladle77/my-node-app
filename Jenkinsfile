@@ -7,8 +7,8 @@ pipeline {
             steps {
                 script {
                     echo 'Accessing GitHub Repository...'
-                    // Trigger Job 1: GitHub access (You can use a Jenkins job trigger here)
-                    build job: 'Job1-GitHub-Access'
+                    // Clone the GitHub repository
+                    git 'https://github.com/your-username/your-repository.git'
                 }
             }
         }
@@ -18,8 +18,15 @@ pipeline {
             steps {
                 script {
                     echo 'Running Java program...'
-                    // Trigger Job 2: Java program execution
-                    build job: 'Job2-Java-Execution'
+
+                    // Ensure Java is installed
+                    bat 'java -version'
+
+                    // Compile the Java program (adjust the file name accordingly)
+                    bat 'javac YourJavaProgram.java'
+
+                    // Run the Java program
+                    bat 'java YourJavaProgram'
                 }
             }
         }
@@ -29,14 +36,18 @@ pipeline {
             steps {
                 script {
                     echo 'Running Python program...'
-                    // Trigger Job 3: Python program execution
-                    build job: 'Job3-Python-Execution'
+
+                    // Ensure Python is installed
+                    bat 'python --version'
+
+                    // Execute the Python script (adjust the file name accordingly)
+                    bat 'python your_script.py'
                 }
             }
         }
 
         // Additional optional stages for Build, Test, or Deploy
-        stage('Build') {
+        stage('Build Docker Image') {
             steps {
                 script {
                     // Build Docker image as per your original script
@@ -44,7 +55,7 @@ pipeline {
                 }
             }
         }
-        
+
         stage('Test') {
             steps {
                 script {
