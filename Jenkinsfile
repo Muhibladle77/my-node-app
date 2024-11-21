@@ -37,10 +37,10 @@ stage('Python Program Execution') {
             echo 'Running Python program...'
 
             // Specify the full path to Python executable
-            bat 'C:\Users\HP\AppData\Local\Programs\Python\Python313\\python.exe --version'
+            bat 'C:\Users\HP\AppData\Local\Programs\Python\Python313\python.exe --version'
 
             // Execute the Python script
-            bat 'C:\Users\HP\AppData\Local\Programs\Python\Python313\\python.exe new.py'
+            bat 'C:\Users\HP\AppData\Local\Programs\Python\Python313\python.exe new.py'
         }
     }
 }
