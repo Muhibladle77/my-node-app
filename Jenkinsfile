@@ -31,20 +31,6 @@ pipeline {
             }
         }
 
-        // Stage for Python Program Execution (Job 3)
-        stage('Python Program Execution') {
-            steps {
-                script {
-                    echo 'Running Python program...'
-
-                    // Ensure Python is installed
-                    bat 'python --version'
-
-                    // Execute the Python script (adjust the file name accordingly)
-                    bat 'python your_script.py'
-                }
-            }
-        }
 
         // Additional optional stages for Build, Test, or Deploy
         stage('Build Docker Image') {
