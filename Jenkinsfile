@@ -38,10 +38,10 @@ pipeline {
                     echo 'Running Python program...'
 
                     // Ensure Python is installed
-                    bat 'python --version'
+                    bat 'py --version'
 
                     // Execute the Python script (adjust the file name accordingly)
-                    bat 'python your_script.py'
+                    bat 'py your_script.py'
                 }
             }
         }
